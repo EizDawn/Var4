@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="14" inline="false" x="86" y="49">
+  <block type="controls_whileUntil" id="14" inline="false" x="20" y="-62">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="29">
@@ -71,7 +71,121 @@
                                               </block>
                                             </value>
                                             <next>
-                                              <block type="multimedia_doupdate" id="175"></block>
+                                              <block type="variables_set" id="192" inline="true">
+                                                <field name="VAR">leftSideObjectSensor</field>
+                                                <value name="VALUE">
+                                                  <block type="sensor_object" id="193">
+                                                    <field name="OBJECT">LEFTSIDE</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="oled_setcursor" id="195" inline="true">
+                                                    <value name="STARTX">
+                                                      <block type="math_number" id="196">
+                                                        <field name="NUM">10</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="STARTY">
+                                                      <block type="math_number" id="197">
+                                                        <field name="NUM">30</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="oled_drawtext" id="198">
+                                                        <field name="TEXT">Left Front=</field>
+                                                        <next>
+                                                          <block type="oled_drawnumber" id="199" inline="true">
+                                                            <value name="NUMBER">
+                                                              <block type="variables_get" id="200">
+                                                                <field name="VAR">leftSideObjectSensor</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="variables_set" id="201" inline="true">
+                                                                <field name="VAR">rightSideObjectSensor</field>
+                                                                <value name="VALUE">
+                                                                  <block type="sensor_object" id="202">
+                                                                    <field name="OBJECT">RIGHTSIDE</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="oled_setcursor" id="203" inline="true">
+                                                                    <value name="STARTX">
+                                                                      <block type="math_number" id="204">
+                                                                        <field name="NUM">10</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="STARTY">
+                                                                      <block type="math_number" id="205">
+                                                                        <field name="NUM">40</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="oled_drawtext" id="206">
+                                                                        <field name="TEXT">Right Side=</field>
+                                                                        <next>
+                                                                          <block type="oled_drawnumber" id="207" inline="true">
+                                                                            <value name="NUMBER">
+                                                                              <block type="variables_get" id="208">
+                                                                                <field name="VAR">rightSideObjectSensor</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="variables_set" id="210" inline="true">
+                                                                                <field name="VAR">RearObjectSensor</field>
+                                                                                <value name="VALUE">
+                                                                                  <block type="sensor_object" id="211">
+                                                                                    <field name="OBJECT">REAR</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="oled_setcursor" id="212" inline="true">
+                                                                                    <value name="STARTX">
+                                                                                      <block type="math_number" id="213">
+                                                                                        <field name="NUM">10</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="STARTY">
+                                                                                      <block type="math_number" id="214">
+                                                                                        <field name="NUM">50</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="oled_drawtext" id="215">
+                                                                                        <field name="TEXT">Rear=</field>
+                                                                                        <next>
+                                                                                          <block type="oled_drawnumber" id="216" inline="true">
+                                                                                            <value name="NUMBER">
+                                                                                              <block type="variables_get" id="217">
+                                                                                                <field name="VAR">RearObjectSensor</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="multimedia_doupdate" id="175"></block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
                                             </next>
                                           </block>
                                         </next>
