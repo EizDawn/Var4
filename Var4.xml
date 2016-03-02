@@ -7,15 +7,15 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="multimedia_doupdate" id="175">
+      <block type="variables_set" id="58" inline="true">
+        <field name="VAR">leftFrontObjectSensor</field>
+        <value name="VALUE">
+          <block type="sensor_object" id="65">
+            <field name="OBJECT">LEFTFRONT</field>
+          </block>
+        </value>
         <next>
-          <block type="variables_set" id="58" inline="true">
-            <field name="VAR">leftFrontObjectSensor</field>
-            <value name="VALUE">
-              <block type="sensor_object" id="65">
-                <field name="OBJECT">LEFTFRONT</field>
-              </block>
-            </value>
+          <block type="multimedia_doupdate" id="175">
             <next>
               <block type="oled_cleardisplay" id="74">
                 <next>
